@@ -1,10 +1,10 @@
 import { red } from '@material-ui/core/colors';
 import { createTheme } from '@material-ui/core/styles';
-import { colors } from '../../styles/colors';
+import { colors } from './colors';
 
 const mainFont = 'Rubik, sans-serif';
 
-export default createTheme({
+export const muiTheme = createTheme({
   palette: {
     primary: {
       main: colors.primary,
@@ -25,7 +25,7 @@ export default createTheme({
   overrides: {
     MuiButton: {
       root: {
-        fontSize: 14,
+        fontSize: 15,
         textTransform: 'uppercase',
         fontFamily: mainFont,
       },
@@ -35,18 +35,17 @@ export default createTheme({
         paddingRight: 30,
         paddingTop: 17,
         paddingBottom: 17,
-        borderRadius: 6,
+        borderRadius: 12,
       },
     },
     MuiInputBase: {
       root: {
         height: '100%',
-        borderRadius: 6,
-        borderTopLeftRadius: 4,
-        borderTopRightRadius: 4,
+        borderRadius: 12,
+        borderTopLeftRadius: 12,
+        borderTopRightRadius: 12,
         '&.Mui-focused > .MuiInputBase-input': {
           background: colors.white,
-          color: colors.black,
           border: `1px solid ${colors.grey}`,
         },
         '&.Mui-focused.Mui-error > .MuiInputBase-input': {
@@ -59,15 +58,15 @@ export default createTheme({
       input: {
         border: `1px solid transparent`,
         boxSizing: 'border-box',
-        fontSize: 14,
-        borderRadius: 6,
-        height: 32,
+        fontSize: 21,
+        borderRadius: 12,
+        height: 52,
         display: 'flex',
         alignItems: 'center',
-        color: colors.primary,
+        color: colors.black,
         fontFamily: mainFont,
         background: colors.grey,
-        paddingLeft: 10,
+        paddingLeft: 15,
         boxShadow: 'none',
         WebkitAppearance: 'none',
       },
@@ -97,7 +96,7 @@ export default createTheme({
         transform: 'translate(15px, 20px) scale(1)',
         textTransform: 'capitalize',
         zIndex: 1,
-        fontSize: 14,
+        fontSize: 16,
       },
       root: {
         '&.Mui-focused:not(.Mui-error)': {
@@ -137,7 +136,6 @@ export default createTheme({
         color: colors.primary,
         '& + .MuiInputBase-root > .MuiInputBase-input': {
           background: colors.white,
-          color: colors.black,
           border: `1px solid ${colors.grey}`,
         },
         '&.Mui-error + .MuiInputBase-root > .MuiInputBase-input': {
@@ -156,13 +154,13 @@ export default createTheme({
         top: 0,
         left: 0,
         width: 54,
-        height: 32,
+        height: 52,
         maxHeight: 'initial',
         background: colors.primary,
         justifyContent: 'center',
         marginRight: 0,
-        borderTopLeftRadius: 4,
-        borderBottomLeftRadius: 4,
+        borderTopLeftRadius: 12,
+        borderBottomLeftRadius: 12,
         border: '1px solid transparent',
         borderRight: 'none',
       },
@@ -177,6 +175,51 @@ export default createTheme({
     MuiCheckbox: {
       root: {
         marginRight: 3,
+      },
+    },
+    MuiTabs: {
+      root: {
+        height: '100%',
+        overflow: 'visible',
+      },
+      flexContainer: {
+        height: '100%',
+      },
+      scroller: {
+        overflow: 'visible!important',
+      },
+    },
+    MuiTab: {
+      root: {
+        textTransform: 'inherit',
+        fontSize: 'inherit',
+        maxWidth: 'initial',
+      },
+    },
+    MuiStepIcon: {
+      root: {
+        display: 'none',
+      },
+    },
+    MuiStepLabel: {
+      root: {
+        position: 'relative',
+      },
+    },
+    MuiMenuItem: {
+      root: {
+        '&$selected': {
+          color: colors.white,
+          backgroundColor: colors.primary,
+          '&:hover': {
+            color: colors.white,
+            backgroundColor: colors.primary,
+          },
+        },
+        '&:hover': {
+          color: colors.white,
+          backgroundColor: colors.primary,
+        },
       },
     },
   },
