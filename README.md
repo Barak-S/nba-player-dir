@@ -1,7 +1,7 @@
 # Barak-S/nba-player-dir
 
 ## Deployment Link
-- [Hosted using Ntlify here](https://main--meek-youtiao-7b77eb.netlify.app/)
+- [Hosted using Netlify here](https://main--meek-youtiao-7b77eb.netlify.app/)
 
 ## Development
 
