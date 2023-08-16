@@ -143,6 +143,9 @@ const useStyles = makeStyles((theme: Theme) => ({
     height: 'fit-content',
     backgroundColor: '#212225',
     color: '#fff',
+    [theme.breakpoints.down('sm')]: {
+      padding: '0px 12px'
+    }
   },
   containerHeader :{
     fontSize: 18,
@@ -158,6 +161,9 @@ const useStyles = makeStyles((theme: Theme) => ({
     width: '100%',
     paddingBottom: 72,
     gap: 42,
+    [theme.breakpoints.down('sm')]: {
+      flexDirection: 'column'
+    }
   },
   finderCard: {
     borderRadius: 12,
@@ -165,13 +171,25 @@ const useStyles = makeStyles((theme: Theme) => ({
     paddingTop: 12,
     width: '50%',
     maxWidth: 500,
-    boxShadow: '0px 6px 6px 6px rgba(0, 0, 0, 0.2)'
+    boxShadow: '0px 6px 6px 6px rgba(0, 0, 0, 0.2)',[theme.breakpoints.down('sm')]: {
+      width: '100%',
+    },
+    [theme.breakpoints.down('sm')]: {
+      width: '100%',
+      padding: '26px 12px',
+    }
   },
   left: {
-    marginRight: 'auto'
+    marginRight: 'auto',
+    [theme.breakpoints.down('sm')]: {
+      margin: 0
+    }
   },
   right: {
-    marginLeft: 'auto'
+    marginLeft: 'auto',
+    [theme.breakpoints.down('sm')]: {
+      margin: 0
+    }
   },
   playersContainer: {
     display: 'flex',

@@ -1,6 +1,6 @@
 import React, { FC, useState, useEffect } from 'react'
 // Component
-import { Avatar, Typography, Theme, useTheme, CircularProgress } from '@material-ui/core'
+import { Avatar, Typography, Theme, useTheme, CircularProgress, useMediaQuery } from '@material-ui/core'
 import { FaBookmark } from 'react-icons/fa'
 // Styles
 import { makeStyles } from '@material-ui/core/styles'
@@ -33,12 +33,13 @@ const PlayerContainer: FC<Props> = ({ player, savedPlayers, onSetFavorite }) => 
 
   const theme: Theme = useTheme()
   const classes = useStyles(theme)
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   return (
     <div
       key={player.id}
       className={classes.playerCardWrapper}
-      style={{ height: isOpen ? 104 : 65 }}
+      style={{ height: isOpen ? isMobile ? 124 : 104 : 65 }}
     >
       <FaBookmark
         color={savedPlayers?.[player.id] ? colors.primary : colors.default}
@@ -107,7 +108,10 @@ const useStyles = makeStyles((theme: Theme) => ({
     borderBottom: '1px solid #F7F7F8',
     backgroundColor: '#212225',
     color: colors.white,
-    position: 'relative'
+    position: 'relative',
+    [theme.breakpoints.down('sm')]: {
+      paddingLeft: 0
+    }
   },
   avatar: {
     marginLeft: 24,
@@ -117,6 +121,9 @@ const useStyles = makeStyles((theme: Theme) => ({
     top: 18,
     position: 'absolute',
     left: 10,
+    [theme.breakpoints.down('sm')]: {
+      left: 0
+    }
   },
   positionTag: {
     borderRadius: 4,
@@ -151,7 +158,11 @@ const useStyles = makeStyles((theme: Theme) => ({
     display: 'flex',
     gap: 8,
     transform: 'translateY(-18px)',
-    marginRight: 57
+    marginRight: 57,
+    [theme.breakpoints.down('sm')]: {
+      transform: 'translateY(-16px)',
+      marginRight: 12,
+    }
   },
   detailsHeader: {
     display: 'flex',
@@ -180,6 +191,9 @@ const useStyles = makeStyles((theme: Theme) => ({
     top: 34,
     '&:hover': {
       textDecoration: 'underline'
+    },
+    [theme.breakpoints.down('sm')]: {
+      top: 2,
     }
   },
   primary: {
