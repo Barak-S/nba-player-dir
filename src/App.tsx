@@ -18,14 +18,7 @@ const App: FC = () => {
     <Provider store={rootReducer}>
       <MuiThemeProvider theme={theme}>
         <CssBaseline />
-        <Router>
-          <Switch>
-            <Route exact path={routes.index}>
-              <Home />
-            </Route>
-            <Redirect to={routes.index} />
-          </Switch>
-        </Router>
+        <Home />
       </MuiThemeProvider>
     </Provider>
   )

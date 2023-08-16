@@ -19,3 +19,28 @@ export interface Team {
   id: number;
   name: string;
 }
+
+export interface PlayerStats {
+  ast:          number;
+  blk:          number;
+  dreb:         number;
+  fg3_pct:      number;
+  fg3a:         number;
+  fg3m:         number;
+  fg_pct:       number;
+  fga:          number;
+  fgm:          number;
+  ft_pct:       number;
+  fta:          number;
+  ftm:          number;
+  games_played: number;
+  min:          string;
+  oreb:         number;
+  pf:           number;
+  player_id:    number;
+  pts:          number;
+  reb:          number;
+  season:       number;
+  st:           number;
+  turnover:     number;
+}

@@ -22,6 +22,7 @@ export const FormInput: FC<Props> = ({ startIcon, className, style, inputProps, 
 
 const useClasses = makeStyles({
   container: {
+    width: 160,
     '& input::placeholder': {
       fontSize: '16px',
       color: colors.grey,

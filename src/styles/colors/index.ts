@@ -4,5 +4,6 @@ export const colors = {
     grey: '#343A40',
     lightGrey: '#ECECEC',
     error: '#ff1744',
-    primary: '#9AE202'
+    primary: '#9AE202',
+    default: '#384245'
 }
