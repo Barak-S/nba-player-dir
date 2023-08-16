@@ -1,4 +1,7 @@
-# Barak-S/typescript-cra-boilerplate
+# Barak-S/nba-player-dir
+
+## Deployment Link
+- [Hosted using Ntlify here](https://main--meek-youtiao-7b77eb.netlify.app/)
 
 ## Development
 
@@ -6,6 +9,10 @@ Install dependencies:
 
 ```
 npm install
+```
+(For this particualr project, you may need to use legacy peer deps, due the the mui-color-picker dependency)
+```
+npm install --legacy-peer-deps
 ```
 
 ```
@@ -43,8 +50,6 @@ Component's name structure:
 ```
 
 Examples:
-
-![Component name examples](docs/component-name-example.png)
 
 Read more at the [original post](https://medium.com/@wittydeveloper/react-components-naming-convention-%EF%B8%8F-b50303551505).
 
